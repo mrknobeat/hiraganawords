@@ -1,5 +1,5 @@
 // frases em portugues
-export const phrases = {
+export const phrases: { [key: string]: string } = {
     // a
     abayo: 'Até logo',
     anata: 'Você',
