@@ -72,7 +72,9 @@ export default function VariantButtonGroup() {
           </ButtonGroup>
           <ButtonGroup variant="text" aria-label="outlined button group">
             <Button key="ya" size="large" className='lowercase w-28'>や {space} ya</Button>
-            <Button key="yu" size="large" className='lowercase w-28'></Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
+            <Button key="yu" size="large" className='lowercase w-28'>ゆ {space} yu</Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
             <Button key="yo" size="large" className='lowercase w-28'>よ {space} yo</Button>
           </ButtonGroup>
           <ButtonGroup variant="text" aria-label="outlined button group">
@@ -84,10 +86,17 @@ export default function VariantButtonGroup() {
           </ButtonGroup>
           <ButtonGroup variant="text" aria-label="outlined button group">
             <Button key="wa" size="large" className='lowercase w-28'>わ {space} wa</Button>
-            <Button key="wo" size="large" className='lowercase w-28'></Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
+            <Button key="wo" size="large" className='lowercase w-28'>を {space} wo</Button>
           </ButtonGroup>
           <ButtonGroup variant="text" aria-label="outlined button group">
+            <Button key="none" size="large" className='lowercase w-28'></Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
             <Button key="n" size="large" className='lowercase w-28'>ん {space} n</Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
+            <Button key="none" size="large" className='lowercase w-28'></Button>
           </ButtonGroup>
         </Box>
       </section>
