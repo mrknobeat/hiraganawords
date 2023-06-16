@@ -19,7 +19,7 @@ export default function Home() {
   const [displayedPhrase, setDisplayedPhrase] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [isSearching, setIsSearching] = useState(false);
-  let typingTimeout: string | number | NodeJS.Timeout | null | undefined = null;
+  let typingTimeout: NodeJS.Timeout | null = null;
 
   const handleCopyClick = () => {
     navigator.clipboard.writeText(postContent);
@@ -34,7 +34,7 @@ export default function Home() {
     }, 3000);
   };
 
-  const handleInputChange = (e: { target: { value: any } }) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value;
     const convertedText = convertText(inputValue);
 
@@ -46,7 +46,9 @@ export default function Home() {
     } else {
       setPostContent(convertedText);
 
-      clearTimeout(typingTimeout); // Limpa o timeout anterior, se existir
+      if (typingTimeout) {
+        clearTimeout(typingTimeout); // Limpa o timeout anterior, se existir
+      }
 
       setIsSearching(true); // Define que a busca está em andamento
 
