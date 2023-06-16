@@ -18,7 +18,6 @@ export default function Home() {
   const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
   const [displayedPhrase, setDisplayedPhrase] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const [isSearching, setIsSearching] = useState(false);
   let typingTimeout: NodeJS.Timeout | null = null;
 
   const handleCopyClick = () => {
@@ -46,7 +45,7 @@ export default function Home() {
     } else {
       setPostContent(convertedText);
 
-      if (typingTimeout) {
+      if (typingTimeout !== null) {
         clearTimeout(typingTimeout); // Limpa o timeout anterior, se existir
       }
 
