@@ -18,6 +18,7 @@ export default function Home() {
   const [isSnackbarOpen, setIsSnackbarOpen] = useState(false);
   const [displayedPhrase, setDisplayedPhrase] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
   let typingTimeout: NodeJS.Timeout | null = null;
 
   const handleCopyClick = () => {
@@ -38,6 +39,7 @@ export default function Home() {
     const convertedText = convertText(inputValue);
 
     setIsTyping(true); // Define que o usuário está digitando
+    setIsSearching(true); // Define que a busca está em andamento
 
     if (inputValue === '') {
       setPostContent('Copiar');
