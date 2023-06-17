@@ -12,7 +12,7 @@
 
 
 
-O projeto ainda está no começo do desenvolvimento.
+O projeto ainda está no começo do desenvolvimento. Você pode ver a demonstração [aqui.](https://hiraganatext.vercel.app)
 
 
 
